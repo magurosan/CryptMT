@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>CryptMT: cryptmt.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CryptMT
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.3.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>データ構造</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>グローバル</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">cryptmt.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="cryptmt_8h.html">説明を見る。</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifndef CRYPTMT_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CRYPTMT_H</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;exception&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="namespacecryptmt.html">   50</a></span>&#160;<span class="keyword">namespace </span>cryptmt {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> *<a class="code" href="namespacecryptmt.html#a46a61bf17e81996c4a034dd1351e096f" title="この関数はSMID関連機能で使用するためのメモリを割り当てる。 この関数で割り当てたメモリは aligned_free() 関数で解放する必要がある。 この関数で割り当てたメモリをmalloc() で割...">aligned_alloc</a>(<span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespacecryptmt.html#ad9aa8f511a1a0720791d797b3444aeb0" title="この関数はaligned_alloc() で割り当てたメモリを解放する。 それ以外のポインタを渡すと何が起こるかわからない。">aligned_free</a>(<span class="keywordtype">void</span> * ptr);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    uint32_t <a class="code" href="namespacecryptmt.html#a429bb34374184610a04d5c0d7bedd1eb" title="ビット単位で表した最大キー長">maxKeySize</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    uint32_t <a class="code" href="namespacecryptmt.html#ad41e715826b7f507829d23632fbd4580" title="ビット単位で表したキー長の単位">keySizeUnit</a>();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="code" href="classcryptmt_1_1_crypt_m_t.html">   95</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classcryptmt_1_1_crypt_m_t.html" title="CryptMT ストリーム暗号">CryptMT</a> {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="code" href="classcryptmt_1_1_crypt_m_t_1_1stage__exception.html">  100</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classcryptmt_1_1_crypt_m_t_1_1stage__exception.html" title="CryptMT の状態エラー">stage_exception</a> : std::runtime_error {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="classcryptmt_1_1_crypt_m_t_1_1stage__exception.html#a14184de657b244ff4667bae109e5b12c">  105</a></span>&#160;            <span class="keyword">explicit</span> <a class="code" href="classcryptmt_1_1_crypt_m_t_1_1stage__exception.html#a14184de657b244ff4667bae109e5b12c" title="CryptMT の状態エラーのコンストラクタ">stage_exception</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *message) :</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            std::runtime_error(message) {}</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classcryptmt_1_1_crypt_m_t.html#a94c89852b1927254a5c7b996aa3629fb" title="キー長とIV長はビット単位の長さであり、128 の倍数で maxKeySize(), 以下の数である必要がある。 この条件に違反するとinvalid_argument 例外が発生する。 必要な内部メモリ...">CryptMT</a>(<span class="keyword">const</span> uint8_t * key,</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                         <span class="keywordtype">int</span> keysize,</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                         <span class="keywordtype">int</span> ivsize)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">throw</span>(std::bad_alloc,std::invalid_argument);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        ~<a class="code" href="classcryptmt_1_1_crypt_m_t.html" title="CryptMT ストリーム暗号">CryptMT</a>();</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classcryptmt_1_1_crypt_m_t.html#a6d58d68ed016cb57801860f6f68047ce" title="初期化ベクトル設定">IVSetUp</a>(<span class="keyword">const</span> uint8_t * iv);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classcryptmt_1_1_crypt_m_t.html#a1d805c20756858477fdcc4f8c6164ae8" title="plaintext を暗号化して ciphertext にセットする。 plaintext と ciphertext のアドレスは整列されて いなければならない。aligned_alloc() を使用す...">encrypt</a>(<span class="keyword">const</span> uint8_t * plaintext,</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                     uint8_t * ciphertext,</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                     uint64_t msglen)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordflow">throw</span>(<a class="code" href="cryptmt_8h.html#abfcff20b863e4b23bcd0b67d9c7938fa" title="CryptMT の状態エラーのコンストラクタ">stage_exception</a>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="code" href="classcryptmt_1_1_crypt_m_t.html#aa07f46ef3d5ecd0f22d081ad21e837ee">  176</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classcryptmt_1_1_crypt_m_t.html#aa07f46ef3d5ecd0f22d081ad21e837ee" title="ciphertext を復号して plaintext にセットする。 stream 暗号の場合、暗号化と復号は同じ処理である。 plaintext と ciphertext のアドレスは整列されて いな...">decrypt</a>(<span class="keyword">const</span> uint8_t * ciphertext,</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                     uint8_t * plaintext,</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                     uint64_t msglen)</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordflow">throw</span>(<a class="code" href="classcryptmt_1_1_crypt_m_t_1_1stage__exception.html" title="CryptMT の状態エラー">stage_exception</a>)</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <a class="code" href="classcryptmt_1_1_crypt_m_t.html#a1d805c20756858477fdcc4f8c6164ae8" title="plaintext を暗号化して ciphertext にセットする。 plaintext と ciphertext のアドレスは整列されて いなければならない。aligned_alloc() を使用す...">encrypt</a>(ciphertext, plaintext, msglen);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="code" href="classcryptmt_1_1_crypt_m_t.html#a02e3bd4347cee319852a525c83c04726">  200</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classcryptmt_1_1_crypt_m_t.html#a02e3bd4347cee319852a525c83c04726" title="iv でsetUpIV() してから、 plaintext を暗号化して ciphertext にセットする。 plaintext と ciphertext のアドレスは整列されて いなければならない。...">encryptPacket</a>(<span class="keyword">const</span> uint8_t * iv,</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                           <span class="keyword">const</span> uint8_t * plaintext,</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                           uint8_t * ciphertext,</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                           uint64_t msglen)</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <a class="code" href="classcryptmt_1_1_crypt_m_t.html#a6d58d68ed016cb57801860f6f68047ce" title="初期化ベクトル設定">IVSetUp</a>(iv);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <a class="code" href="classcryptmt_1_1_crypt_m_t.html#a1d805c20756858477fdcc4f8c6164ae8" title="plaintext を暗号化して ciphertext にセットする。 plaintext と ciphertext のアドレスは整列されて いなければならない。aligned_alloc() を使用す...">encrypt</a>(plaintext, ciphertext, msglen);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno"><a class="code" href="classcryptmt_1_1_crypt_m_t.html#a0030addae15ab6d6aaaea8a1d1b364e3">  225</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classcryptmt_1_1_crypt_m_t.html#a0030addae15ab6d6aaaea8a1d1b364e3" title="iv でsetUpIV() してから、 ciphertext を復号して plaintext にセットする。 plaintext と ciphertext のアドレスは整列されて いなければならない。a...">decryptPacket</a>(<span class="keyword">const</span> uint8_t * iv,</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                           <span class="keyword">const</span> uint8_t * ciphertext,</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                           uint8_t * plaintext,</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                           uint64_t msglen)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <a class="code" href="classcryptmt_1_1_crypt_m_t.html#a02e3bd4347cee319852a525c83c04726" title="iv でsetUpIV() してから、 plaintext を暗号化して ciphertext にセットする。 plaintext と ciphertext のアドレスは整列されて いなければならない。...">encryptPacket</a>(iv, ciphertext, plaintext, msglen);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classcryptmt_1_1_crypt_m_t.html#aafc062ba85e08b3416a2f561e3bb6098" title="plaintext を暗号化して ciphertext にセットする。 1 ブロックの長さは、 blockLength() で取得できる。 plaintext と ciphertext のアドレスは整列...">encryptBlocks</a>(<span class="keyword">const</span> uint8_t * plaintext,</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                           uint8_t * ciphertext,</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                           uint32_t blocks)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            <span class="keywordflow">throw</span>(<a class="code" href="cryptmt_8h.html#abfcff20b863e4b23bcd0b67d9c7938fa" title="CryptMT の状態エラーのコンストラクタ">stage_exception</a>);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00264"></a><span class="lineno"><a class="code" href="classcryptmt_1_1_crypt_m_t.html#af3da5d5751c1e03c074c85db04e1b728">  264</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classcryptmt_1_1_crypt_m_t.html#af3da5d5751c1e03c074c85db04e1b728" title="ciphertext を復号して plaintext にセットする。 1 ブロックの長さは、 blockLength() で取得できる。 plaintext と ciphertext のアドレスは整列さ...">decryptBlocks</a>(<span class="keyword">const</span> uint8_t * ciphertext,</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                           uint8_t * plaintext,</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                           uint32_t blocks)</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            <span class="keywordflow">throw</span>(<a class="code" href="classcryptmt_1_1_crypt_m_t_1_1stage__exception.html" title="CryptMT の状態エラー">stage_exception</a>)</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <a class="code" href="classcryptmt_1_1_crypt_m_t.html#aafc062ba85e08b3416a2f561e3bb6098" title="plaintext を暗号化して ciphertext にセットする。 1 ブロックの長さは、 blockLength() で取得できる。 plaintext と ciphertext のアドレスは整列...">encryptBlocks</a>(ciphertext, plaintext, blocks);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        uint32_t <a class="code" href="classcryptmt_1_1_crypt_m_t.html#a469fc3094c1fa4104b2a8a90a308c672" title="encryptBlocks(), decryptBlocks() を使うときに 必要となるブロック長を返す。">blockLength</a>();</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor">#if defined(DEBUG)</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="preprocessor"></span>        <span class="keywordtype">void</span> debug_print();</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="preprocessor"></span>    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keyword">class </span>Impl;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        Impl * impl;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <a class="code" href="classcryptmt_1_1_crypt_m_t.html#a94c89852b1927254a5c7b996aa3629fb" title="キー長とIV長はビット単位の長さであり、128 の倍数で maxKeySize(), 以下の数である必要がある。 この条件に違反するとinvalid_argument 例外が発生する。 必要な内部メモリ...">CryptMT</a>(<span class="keyword">const</span> <a class="code" href="classcryptmt_1_1_crypt_m_t.html" title="CryptMT ストリーム暗号">CryptMT</a>&amp;);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classcryptmt_1_1_crypt_m_t.html" title="CryptMT ストリーム暗号">CryptMT</a>&amp;);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    };</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;}</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* CRYPTMT_H */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+CryptMTに対してMon May 27 2013 16:33:37に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.3.1
+</small></address>
+</body>
+</html>

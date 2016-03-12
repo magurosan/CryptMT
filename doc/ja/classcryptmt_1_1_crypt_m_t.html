@@ -1,0 +1,550 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>CryptMT: クラス cryptmt::CryptMT</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CryptMT
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.3.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>データ構造</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>データ構造</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>データフィールド</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecryptmt.html">cryptmt</a></li><li class="navelem"><a class="el" href="classcryptmt_1_1_crypt_m_t.html">CryptMT</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ構造</a> &#124;
+<a href="#pub-methods">Public メソッド</a>  </div>
+  <div class="headertitle">
+<div class="title">クラス cryptmt::CryptMT</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classcryptmt_1_1_crypt_m_t.html" title="CryptMT ストリーム暗号">CryptMT</a> ストリーム暗号  
+ <a href="classcryptmt_1_1_crypt_m_t.html#details">[詳細]</a></p>
+
+<p><code>#include &lt;<a class="el" href="cryptmt_8h_source.html">cryptmt.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ構造</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcryptmt_1_1_crypt_m_t_1_1stage__exception.html">stage_exception</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classcryptmt_1_1_crypt_m_t.html" title="CryptMT ストリーム暗号">CryptMT</a> の状態エラー  <a href="classcryptmt_1_1_crypt_m_t_1_1stage__exception.html#details">[詳細]</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public メソッド</h2></td></tr>
+<tr class="memitem:a94c89852b1927254a5c7b996aa3629fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcryptmt_1_1_crypt_m_t_1_1stage__exception.html">cryptmt::CryptMT::stage_exception</a> <br class="typebreak"/>
+std::runtime_error&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcryptmt_1_1_crypt_m_t.html#a94c89852b1927254a5c7b996aa3629fb">CryptMT</a> (const uint8_t *key, int keysize, int ivsize)  throw (std::bad_alloc,std::invalid_argument)</td></tr>
+<tr class="memdesc:a94c89852b1927254a5c7b996aa3629fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー長とIV長はビット単位の長さであり、128 の倍数で <a class="el" href="namespacecryptmt.html#a429bb34374184610a04d5c0d7bedd1eb" title="ビット単位で表した最大キー長">maxKeySize()</a>, 以下の数である必要がある。 この条件に違反するとinvalid_argument 例外が発生する。 必要な内部メモリ割り当てに失敗するとbad_alloc例外が発生する。  <a href="#a94c89852b1927254a5c7b996aa3629fb">[詳細]</a><br/></td></tr>
+<tr class="separator:a94c89852b1927254a5c7b996aa3629fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d58d68ed016cb57801860f6f68047ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcryptmt_1_1_crypt_m_t.html#a6d58d68ed016cb57801860f6f68047ce">IVSetUp</a> (const uint8_t *iv)</td></tr>
+<tr class="memdesc:a6d58d68ed016cb57801860f6f68047ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化ベクトル設定  <a href="#a6d58d68ed016cb57801860f6f68047ce">[詳細]</a><br/></td></tr>
+<tr class="separator:a6d58d68ed016cb57801860f6f68047ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d805c20756858477fdcc4f8c6164ae8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcryptmt_1_1_crypt_m_t.html#a1d805c20756858477fdcc4f8c6164ae8">encrypt</a> (const uint8_t *plaintext, uint8_t *ciphertext, uint64_t msglen)  throw (stage_exception)</td></tr>
+<tr class="memdesc:a1d805c20756858477fdcc4f8c6164ae8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>plaintext</b> を暗号化して <b>ciphertext</b> にセットする。 <b>plaintext</b> と <b>ciphertext</b> のアドレスは整列されて いなければならない。aligned_alloc() を使用すれば整列された アドレスのメモリが取得できる。  <a href="#a1d805c20756858477fdcc4f8c6164ae8">[詳細]</a><br/></td></tr>
+<tr class="separator:a1d805c20756858477fdcc4f8c6164ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa07f46ef3d5ecd0f22d081ad21e837ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcryptmt_1_1_crypt_m_t.html#aa07f46ef3d5ecd0f22d081ad21e837ee">decrypt</a> (const uint8_t *ciphertext, uint8_t *plaintext, uint64_t msglen)  throw (stage_exception)</td></tr>
+<tr class="memdesc:aa07f46ef3d5ecd0f22d081ad21e837ee"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>ciphertext</b> を復号して <b>plaintext</b> にセットする。 stream 暗号の場合、暗号化と復号は同じ処理である。 <b>plaintext</b> と <b>ciphertext</b> のアドレスは整列されて いなければならない。aligned_alloc() を使用すれば整列された アドレスのメモリが取得できる。  <a href="#aa07f46ef3d5ecd0f22d081ad21e837ee">[詳細]</a><br/></td></tr>
+<tr class="separator:aa07f46ef3d5ecd0f22d081ad21e837ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02e3bd4347cee319852a525c83c04726"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcryptmt_1_1_crypt_m_t.html#a02e3bd4347cee319852a525c83c04726">encryptPacket</a> (const uint8_t *iv, const uint8_t *plaintext, uint8_t *ciphertext, uint64_t msglen)</td></tr>
+<tr class="memdesc:a02e3bd4347cee319852a525c83c04726"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>iv</b> でsetUpIV() してから、 <b>plaintext</b> を暗号化して <b>ciphertext</b> にセットする。 <b>plaintext</b> と <b>ciphertext</b> のアドレスは整列されて いなければならない。aligned_alloc() を使用すれば整列された アドレスのメモリが取得できる。  <a href="#a02e3bd4347cee319852a525c83c04726">[詳細]</a><br/></td></tr>
+<tr class="separator:a02e3bd4347cee319852a525c83c04726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0030addae15ab6d6aaaea8a1d1b364e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcryptmt_1_1_crypt_m_t.html#a0030addae15ab6d6aaaea8a1d1b364e3">decryptPacket</a> (const uint8_t *iv, const uint8_t *ciphertext, uint8_t *plaintext, uint64_t msglen)</td></tr>
+<tr class="memdesc:a0030addae15ab6d6aaaea8a1d1b364e3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>iv</b> でsetUpIV() してから、 <b>ciphertext</b> を復号して <b>plaintext</b> にセットする。 <b>plaintext</b> と <b>ciphertext</b> のアドレスは整列されて いなければならない。aligned_alloc() を使用すれば整列された アドレスのメモリが取得できる。  <a href="#a0030addae15ab6d6aaaea8a1d1b364e3">[詳細]</a><br/></td></tr>
+<tr class="separator:a0030addae15ab6d6aaaea8a1d1b364e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafc062ba85e08b3416a2f561e3bb6098"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcryptmt_1_1_crypt_m_t.html#aafc062ba85e08b3416a2f561e3bb6098">encryptBlocks</a> (const uint8_t *plaintext, uint8_t *ciphertext, uint32_t blocks)  throw (stage_exception)</td></tr>
+<tr class="memdesc:aafc062ba85e08b3416a2f561e3bb6098"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>plaintext</b> を暗号化して <b>ciphertext</b> にセットする。 1 ブロックの長さは、 <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a469fc3094c1fa4104b2a8a90a308c672" title="encryptBlocks(), decryptBlocks() を使うときに 必要となるブロック長を返す。">blockLength()</a> で取得できる。 <b>plaintext</b> と <b>ciphertext</b> のアドレスは整列されて いなければならない。aligned_alloc() を使用すれば整列された アドレスのメモリが取得できる。  <a href="#aafc062ba85e08b3416a2f561e3bb6098">[詳細]</a><br/></td></tr>
+<tr class="separator:aafc062ba85e08b3416a2f561e3bb6098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3da5d5751c1e03c074c85db04e1b728"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcryptmt_1_1_crypt_m_t.html#af3da5d5751c1e03c074c85db04e1b728">decryptBlocks</a> (const uint8_t *ciphertext, uint8_t *plaintext, uint32_t blocks)  throw (stage_exception)</td></tr>
+<tr class="memdesc:af3da5d5751c1e03c074c85db04e1b728"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>ciphertext</b> を復号して <b>plaintext</b> にセットする。 1 ブロックの長さは、 <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a469fc3094c1fa4104b2a8a90a308c672" title="encryptBlocks(), decryptBlocks() を使うときに 必要となるブロック長を返す。">blockLength()</a> で取得できる。 <b>plaintext</b> と <b>ciphertext</b> のアドレスは整列されて いなければならない。aligned_alloc() を使用すれば整列された アドレスのメモリが取得できる。  <a href="#af3da5d5751c1e03c074c85db04e1b728">[詳細]</a><br/></td></tr>
+<tr class="separator:af3da5d5751c1e03c074c85db04e1b728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a469fc3094c1fa4104b2a8a90a308c672"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcryptmt_1_1_crypt_m_t.html#a469fc3094c1fa4104b2a8a90a308c672">blockLength</a> ()</td></tr>
+<tr class="memdesc:a469fc3094c1fa4104b2a8a90a308c672"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classcryptmt_1_1_crypt_m_t.html#aafc062ba85e08b3416a2f561e3bb6098" title="plaintext を暗号化して ciphertext にセットする。 1 ブロックの長さは、 blockLength() で取得できる。 plaintext と ciphertext のアドレスは整列...">encryptBlocks()</a>, <a class="el" href="classcryptmt_1_1_crypt_m_t.html#af3da5d5751c1e03c074c85db04e1b728" title="ciphertext を復号して plaintext にセットする。 1 ブロックの長さは、 blockLength() で取得できる。 plaintext と ciphertext のアドレスは整列さ...">decryptBlocks()</a> を使うときに 必要となるブロック長を返す。  <a href="#a469fc3094c1fa4104b2a8a90a308c672">[詳細]</a><br/></td></tr>
+<tr class="separator:a469fc3094c1fa4104b2a8a90a308c672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">説明</h2>
+<div class="textblock"><p><a class="el" href="classcryptmt_1_1_crypt_m_t.html" title="CryptMT ストリーム暗号">CryptMT</a> ストリーム暗号 </p>
+</div><h2 class="groupheader">コンストラクタとデストラクタ</h2>
+<a class="anchor" id="a94c89852b1927254a5c7b996aa3629fb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcryptmt_1_1_crypt_m_t_1_1stage__exception.html">cryptmt::CryptMT::stage_exception</a> std::runtime_error cryptmt::CryptMT::CryptMT </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>keysize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ivsize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throw (std::bad_alloc,std::invalid_argument)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キー長とIV長はビット単位の長さであり、128 の倍数で <a class="el" href="namespacecryptmt.html#a429bb34374184610a04d5c0d7bedd1eb" title="ビット単位で表した最大キー長">maxKeySize()</a>, 以下の数である必要がある。 この条件に違反するとinvalid_argument 例外が発生する。 必要な内部メモリ割り当てに失敗するとbad_alloc例外が発生する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>暗号化キー </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">keysize</td><td>ビット単位のキーサイズ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ivsize</td><td>ビット単位のIVサイズ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>例外</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::bad_alloc</td><td>内部メモリの割り当てに失敗した時 </td></tr>
+    <tr><td class="paramname">std::invalid_argument</td><td><b>keysize</b> または <b>ivsize</b> が適切でない。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">関数</h2>
+<a class="anchor" id="a469fc3094c1fa4104b2a8a90a308c672"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t cryptmt::CryptMT::blockLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classcryptmt_1_1_crypt_m_t.html#aafc062ba85e08b3416a2f561e3bb6098" title="plaintext を暗号化して ciphertext にセットする。 1 ブロックの長さは、 blockLength() で取得できる。 plaintext と ciphertext のアドレスは整列...">encryptBlocks()</a>, <a class="el" href="classcryptmt_1_1_crypt_m_t.html#af3da5d5751c1e03c074c85db04e1b728" title="ciphertext を復号して plaintext にセットする。 1 ブロックの長さは、 blockLength() で取得できる。 plaintext と ciphertext のアドレスは整列さ...">decryptBlocks()</a> を使うときに 必要となるブロック長を返す。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>ブロック長（バイト） </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa07f46ef3d5ecd0f22d081ad21e837ee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cryptmt::CryptMT::decrypt </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>plaintext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>msglen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throw (<a class="el" href="classcryptmt_1_1_crypt_m_t_1_1stage__exception.html">stage_exception</a>)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><b>ciphertext</b> を復号して <b>plaintext</b> にセットする。 stream 暗号の場合、暗号化と復号は同じ処理である。 <b>plaintext</b> と <b>ciphertext</b> のアドレスは整列されて いなければならない。aligned_alloc() を使用すれば整列された アドレスのメモリが取得できる。 </p>
+<p>この関数の実行後は、IVSetUp を実行するまでは、以下の暗号化および 復号関数を実行してはならない。 <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a1d805c20756858477fdcc4f8c6164ae8" title="plaintext を暗号化して ciphertext にセットする。 plaintext と ciphertext のアドレスは整列されて いなければならない。aligned_alloc() を使用す...">encrypt()</a>,<a class="el" href="classcryptmt_1_1_crypt_m_t.html#aa07f46ef3d5ecd0f22d081ad21e837ee" title="ciphertext を復号して plaintext にセットする。 stream 暗号の場合、暗号化と復号は同じ処理である。 plaintext と ciphertext のアドレスは整列されて いな...">decrypt()</a>, <a class="el" href="classcryptmt_1_1_crypt_m_t.html#aafc062ba85e08b3416a2f561e3bb6098" title="plaintext を暗号化して ciphertext にセットする。 1 ブロックの長さは、 blockLength() で取得できる。 plaintext と ciphertext のアドレスは整列...">encryptBlocks()</a>,<a class="el" href="classcryptmt_1_1_crypt_m_t.html#af3da5d5751c1e03c074c85db04e1b728" title="ciphertext を復号して plaintext にセットする。 1 ブロックの長さは、 blockLength() で取得できる。 plaintext と ciphertext のアドレスは整列さ...">decryptBlocks()</a>.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ciphertext</td><td>暗号文 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">plaintext</td><td>平文 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msglen</td><td>暗号文の長さ（バイト） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>例外</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcryptmt_1_1_crypt_m_t_1_1stage__exception.html" title="CryptMT の状態エラー">stage_exception</a></td><td><a class="el" href="classcryptmt_1_1_crypt_m_t.html#a6d58d68ed016cb57801860f6f68047ce" title="初期化ベクトル設定">IVSetUp()</a> を実行していない、または <a class="el" href="classcryptmt_1_1_crypt_m_t.html#aa07f46ef3d5ecd0f22d081ad21e837ee" title="ciphertext を復号して plaintext にセットする。 stream 暗号の場合、暗号化と復号は同じ処理である。 plaintext と ciphertext のアドレスは整列されて いな...">decrypt()</a> 呼び出しの後に <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a6d58d68ed016cb57801860f6f68047ce" title="初期化ベクトル設定">IVSetUp()</a> を実行していない。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>参照先 <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a1d805c20756858477fdcc4f8c6164ae8">encrypt()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af3da5d5751c1e03c074c85db04e1b728"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cryptmt::CryptMT::decryptBlocks </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>plaintext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>blocks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throw (<a class="el" href="classcryptmt_1_1_crypt_m_t_1_1stage__exception.html">stage_exception</a>)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><b>ciphertext</b> を復号して <b>plaintext</b> にセットする。 1 ブロックの長さは、 <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a469fc3094c1fa4104b2a8a90a308c672" title="encryptBlocks(), decryptBlocks() を使うときに 必要となるブロック長を返す。">blockLength()</a> で取得できる。 <b>plaintext</b> と <b>ciphertext</b> のアドレスは整列されて いなければならない。aligned_alloc() を使用すれば整列された アドレスのメモリが取得できる。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ciphertext</td><td>暗号文 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">plaintext</td><td>平文 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">blocks</td><td>平文の長さ（ブロック数） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>例外</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcryptmt_1_1_crypt_m_t_1_1stage__exception.html" title="CryptMT の状態エラー">stage_exception</a></td><td><a class="el" href="classcryptmt_1_1_crypt_m_t.html#a6d58d68ed016cb57801860f6f68047ce" title="初期化ベクトル設定">IVSetUp()</a> を実行していない、または <a class="el" href="classcryptmt_1_1_crypt_m_t.html#aa07f46ef3d5ecd0f22d081ad21e837ee" title="ciphertext を復号して plaintext にセットする。 stream 暗号の場合、暗号化と復号は同じ処理である。 plaintext と ciphertext のアドレスは整列されて いな...">decrypt()</a> 呼び出しの後に <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a6d58d68ed016cb57801860f6f68047ce" title="初期化ベクトル設定">IVSetUp()</a> を実行していない。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>参照先 <a class="el" href="classcryptmt_1_1_crypt_m_t.html#aafc062ba85e08b3416a2f561e3bb6098">encryptBlocks()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0030addae15ab6d6aaaea8a1d1b364e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cryptmt::CryptMT::decryptPacket </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>iv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>plaintext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>msglen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><b>iv</b> でsetUpIV() してから、 <b>ciphertext</b> を復号して <b>plaintext</b> にセットする。 <b>plaintext</b> と <b>ciphertext</b> のアドレスは整列されて いなければならない。aligned_alloc() を使用すれば整列された アドレスのメモリが取得できる。 </p>
+<p>この関数の実行後は、IVSetUp を実行するまでは、以下の暗号化および 復号関数を実行してはならない。 <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a1d805c20756858477fdcc4f8c6164ae8" title="plaintext を暗号化して ciphertext にセットする。 plaintext と ciphertext のアドレスは整列されて いなければならない。aligned_alloc() を使用す...">encrypt()</a>,<a class="el" href="classcryptmt_1_1_crypt_m_t.html#aa07f46ef3d5ecd0f22d081ad21e837ee" title="ciphertext を復号して plaintext にセットする。 stream 暗号の場合、暗号化と復号は同じ処理である。 plaintext と ciphertext のアドレスは整列されて いな...">decrypt()</a>, <a class="el" href="classcryptmt_1_1_crypt_m_t.html#aafc062ba85e08b3416a2f561e3bb6098" title="plaintext を暗号化して ciphertext にセットする。 1 ブロックの長さは、 blockLength() で取得できる。 plaintext と ciphertext のアドレスは整列...">encryptBlocks()</a>,<a class="el" href="classcryptmt_1_1_crypt_m_t.html#af3da5d5751c1e03c074c85db04e1b728" title="ciphertext を復号して plaintext にセットする。 1 ブロックの長さは、 blockLength() で取得できる。 plaintext と ciphertext のアドレスは整列さ...">decryptBlocks()</a>.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iv</td><td>初期化ベクトル </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ciphertext</td><td>暗号文 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">plaintext</td><td>平文 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msglen</td><td>平文の長さ（バイト） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>参照先 <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a02e3bd4347cee319852a525c83c04726">encryptPacket()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1d805c20756858477fdcc4f8c6164ae8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cryptmt::CryptMT::encrypt </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>plaintext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>msglen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throw (<a class="el" href="classcryptmt_1_1_crypt_m_t_1_1stage__exception.html">stage_exception</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>plaintext</b> を暗号化して <b>ciphertext</b> にセットする。 <b>plaintext</b> と <b>ciphertext</b> のアドレスは整列されて いなければならない。aligned_alloc() を使用すれば整列された アドレスのメモリが取得できる。 </p>
+<p>この関数の実行後は、IVSetUp を実行するまでは、以下の暗号化および 復号関数を実行してはならない。 <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a1d805c20756858477fdcc4f8c6164ae8" title="plaintext を暗号化して ciphertext にセットする。 plaintext と ciphertext のアドレスは整列されて いなければならない。aligned_alloc() を使用す...">encrypt()</a>, <a class="el" href="classcryptmt_1_1_crypt_m_t.html#aa07f46ef3d5ecd0f22d081ad21e837ee" title="ciphertext を復号して plaintext にセットする。 stream 暗号の場合、暗号化と復号は同じ処理である。 plaintext と ciphertext のアドレスは整列されて いな...">decrypt()</a>, <a class="el" href="classcryptmt_1_1_crypt_m_t.html#aafc062ba85e08b3416a2f561e3bb6098" title="plaintext を暗号化して ciphertext にセットする。 1 ブロックの長さは、 blockLength() で取得できる。 plaintext と ciphertext のアドレスは整列...">encryptBlocks()</a>, <a class="el" href="classcryptmt_1_1_crypt_m_t.html#af3da5d5751c1e03c074c85db04e1b728" title="ciphertext を復号して plaintext にセットする。 1 ブロックの長さは、 blockLength() で取得できる。 plaintext と ciphertext のアドレスは整列さ...">decryptBlocks()</a>.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">plaintext</td><td>平文 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ciphertext</td><td>暗号文 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msglen</td><td>平文の長さ（バイト） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>例外</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcryptmt_1_1_crypt_m_t_1_1stage__exception.html" title="CryptMT の状態エラー">stage_exception</a></td><td><a class="el" href="classcryptmt_1_1_crypt_m_t.html#a6d58d68ed016cb57801860f6f68047ce" title="初期化ベクトル設定">IVSetUp()</a> を実行していない、または <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a1d805c20756858477fdcc4f8c6164ae8" title="plaintext を暗号化して ciphertext にセットする。 plaintext と ciphertext のアドレスは整列されて いなければならない。aligned_alloc() を使用す...">encrypt()</a> 呼び出しの後に <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a6d58d68ed016cb57801860f6f68047ce" title="初期化ベクトル設定">IVSetUp()</a> を実行していない。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>参照元 <a class="el" href="classcryptmt_1_1_crypt_m_t.html#aa07f46ef3d5ecd0f22d081ad21e837ee">decrypt()</a>, と <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a02e3bd4347cee319852a525c83c04726">encryptPacket()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aafc062ba85e08b3416a2f561e3bb6098"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cryptmt::CryptMT::encryptBlocks </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>plaintext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>blocks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throw (<a class="el" href="classcryptmt_1_1_crypt_m_t_1_1stage__exception.html">stage_exception</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>plaintext</b> を暗号化して <b>ciphertext</b> にセットする。 1 ブロックの長さは、 <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a469fc3094c1fa4104b2a8a90a308c672" title="encryptBlocks(), decryptBlocks() を使うときに 必要となるブロック長を返す。">blockLength()</a> で取得できる。 <b>plaintext</b> と <b>ciphertext</b> のアドレスは整列されて いなければならない。aligned_alloc() を使用すれば整列された アドレスのメモリが取得できる。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">plaintext</td><td>平文 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ciphertext</td><td>暗号文 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">blocks</td><td>平文の長さ（ブロック数） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>例外</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcryptmt_1_1_crypt_m_t_1_1stage__exception.html" title="CryptMT の状態エラー">stage_exception</a></td><td><a class="el" href="classcryptmt_1_1_crypt_m_t.html#a6d58d68ed016cb57801860f6f68047ce" title="初期化ベクトル設定">IVSetUp()</a> を実行していない、または <a class="el" href="classcryptmt_1_1_crypt_m_t.html#aa07f46ef3d5ecd0f22d081ad21e837ee" title="ciphertext を復号して plaintext にセットする。 stream 暗号の場合、暗号化と復号は同じ処理である。 plaintext と ciphertext のアドレスは整列されて いな...">decrypt()</a> 呼び出しの後に <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a6d58d68ed016cb57801860f6f68047ce" title="初期化ベクトル設定">IVSetUp()</a> を実行していない。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>参照元 <a class="el" href="classcryptmt_1_1_crypt_m_t.html#af3da5d5751c1e03c074c85db04e1b728">decryptBlocks()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a02e3bd4347cee319852a525c83c04726"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cryptmt::CryptMT::encryptPacket </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>iv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>plaintext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>msglen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><b>iv</b> でsetUpIV() してから、 <b>plaintext</b> を暗号化して <b>ciphertext</b> にセットする。 <b>plaintext</b> と <b>ciphertext</b> のアドレスは整列されて いなければならない。aligned_alloc() を使用すれば整列された アドレスのメモリが取得できる。 </p>
+<p>この関数の実行後は、IVSetUp を実行するまでは、以下の暗号化および 復号関数を実行してはならない。 <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a1d805c20756858477fdcc4f8c6164ae8" title="plaintext を暗号化して ciphertext にセットする。 plaintext と ciphertext のアドレスは整列されて いなければならない。aligned_alloc() を使用す...">encrypt()</a>,<a class="el" href="classcryptmt_1_1_crypt_m_t.html#aa07f46ef3d5ecd0f22d081ad21e837ee" title="ciphertext を復号して plaintext にセットする。 stream 暗号の場合、暗号化と復号は同じ処理である。 plaintext と ciphertext のアドレスは整列されて いな...">decrypt()</a>, <a class="el" href="classcryptmt_1_1_crypt_m_t.html#aafc062ba85e08b3416a2f561e3bb6098" title="plaintext を暗号化して ciphertext にセットする。 1 ブロックの長さは、 blockLength() で取得できる。 plaintext と ciphertext のアドレスは整列...">encryptBlocks()</a>,<a class="el" href="classcryptmt_1_1_crypt_m_t.html#af3da5d5751c1e03c074c85db04e1b728" title="ciphertext を復号して plaintext にセットする。 1 ブロックの長さは、 blockLength() で取得できる。 plaintext と ciphertext のアドレスは整列さ...">decryptBlocks()</a>.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iv</td><td>初期化ベクトル </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">plaintext</td><td>平文 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ciphertext</td><td>暗号文 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msglen</td><td>平文の長さ（バイト） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>参照先 <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a1d805c20756858477fdcc4f8c6164ae8">encrypt()</a>, と <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a6d58d68ed016cb57801860f6f68047ce">IVSetUp()</a>.</p>
+
+<p>参照元 <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a0030addae15ab6d6aaaea8a1d1b364e3">decryptPacket()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6d58d68ed016cb57801860f6f68047ce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cryptmt::CryptMT::IVSetUp </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>iv</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化ベクトル設定 </p>
+<p>暗号化をする前に初期ベクトル設定をしなければならない。 この条件に反すると、stage_exception 例外が発生する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iv</td><td>初期化ベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>参照元 <a class="el" href="classcryptmt_1_1_crypt_m_t.html#a02e3bd4347cee319852a525c83c04726">encryptPacket()</a>.</p>
+
+</div>
+</div>
+<hr/>このクラスの説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="cryptmt_8h_source.html">cryptmt.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+CryptMTに対してMon May 27 2013 16:33:37に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.3.1
+</small></address>
+</body>
+</html>
